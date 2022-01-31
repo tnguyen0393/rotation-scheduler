@@ -42,6 +42,7 @@ const Form = () => {
   const updateInfo = (e) => {
     let name = e.target.name
     let value = e.target.value
+    console.log(name)
     
     switch(name) {
         case 'firstName':
@@ -57,6 +58,7 @@ const Form = () => {
             setMilitaryBranch(value)
             break;
         case 'deptOfDefenseId':
+            console.log("THIS WORKS")
             setDepartmentOfDefenseId(value)
             break;
         case 'gradYeaar':
@@ -119,6 +121,7 @@ const Form = () => {
           id="deptOfDefenseIdInput"
           placeholder="Department of Defense ID"
           name="deptOfDefenseId"
+          onChange={updateInfo}
           />
       </div>
       <div className="form-group">
